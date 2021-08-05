@@ -1,0 +1,21 @@
+
+
+@mixin carte {border-radius: 20px;
+    box-shadow: 5px 5px black;
+    
+}
+.test
+{
+    @include carte();
+    width: 500px;
+    height: 200px;
+    background-color: blue;
+    &__enner{
+        @include carte();
+        width: 100px;
+        background-color: black;
+        height: 300px;
+        border-radius: 30px;
+    }
+
+}
