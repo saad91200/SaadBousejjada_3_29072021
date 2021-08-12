@@ -1,10 +1,19 @@
 @use 'variables';
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @mixin button {
     border-radius: 24px;
     padding: 16px;
     width: fit-content;
-    box-shadow: 8px 8px 8px gray;
+    box-shadow: 4px 4px 4px gainsboro;
     background-color: variables.$primary-color;
     color: variables.$font-color-inversed;
+}
+
+@mixin font-title {
+    font-family: "Shrikhand", cursive;
+}
+
+@mixin font-text {
+    font-family: "Roboto", sans-serif;
 }
