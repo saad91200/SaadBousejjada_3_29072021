@@ -14,8 +14,7 @@
     }
 }
 
-span
-{
+span {
     font-weight: bold;
     font-size: 20px;
 }
@@ -34,9 +33,10 @@ span
 
 .explorer {
     background-color: #f6f6f6;
-    width: 380px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     &_button {
         @include mixins.button;
         margin: 0 auto;
@@ -47,13 +47,12 @@ span
     text-align: center;
     margin: 2rem;
 }
-.explorer_content{
+.explorer_content {
     text-align: center;
     margin: 2rem;
 }
 
-.fonctionnement_title
-{
+.fonctionnement_title {
     margin: 1rem;
 }
 
@@ -62,27 +61,36 @@ span
     height: 100%;
 }
 .fonctionnement {
-    width: auto;
     border-radius: 20px;
-    height: 70px;
+    height: 80px;
+    width: 100%;
     display: flex;
     position: relative;
-    padding-left: 52px;
-    margin: 0.5rem;
+    margin: 1rem;
     background-color: #f6f6f6;
     box-shadow: 3px 3px 3px gainsboro;
 }
 
-.fonctionnement_texte {
-    text-align: center;
 
+.fonctionnement_rond {
+    border-radius: 50px 50px 50px 50px;
+    padding: 15px;
+    width: 2px;
+    height: 2px;
+    margin-right: 4rem;
+    margin-top: 1rem;
+    background-color: variables.$primary-color;
+}
+.fonctionnement_icone {
+    width: 15px;
+    margin-top: 2rem;
+    
 }
 
-.fonctionnement_icone {
-    width: 20px;
-    height: 20px;
-    margin-right: 100px;
-   
+.fonctionnement_texte
+{
+    margin: 2rem;
+    font-size: 18px;
 }
 
 .filtre_icone img {
@@ -95,6 +103,7 @@ span
 .restaurants {
     width: 100%;
     height: 100%;
+    padding-top: 1rem;
 }
 
 .restaurants_articles {
@@ -121,8 +130,8 @@ span
     background-color: white;
     border-radius: 20px;
     display: flex;
-    width: 340px;
-    height: 240px;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     box-shadow: 4px 4px 4px gainsboro;
 }
@@ -136,7 +145,8 @@ span
 
 .restaurant_article_coeur {
     width: 25px;
-    margin-left: 18rem;
+    margin-left: 21rem;
+    margin-bottom: 1rem;
 }
 
 .restaurant_article_contenu {
