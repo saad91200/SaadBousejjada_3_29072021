@@ -2,7 +2,7 @@
 @use 'variables';
 @use 'mixins';
 
-* {
+body {
     @include mixins.font-text;
 }
 
@@ -12,11 +12,6 @@
         margin: 1rem auto;
         display: block;
     }
-}
-
-span {
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .map {
@@ -59,6 +54,8 @@ span {
 .fonctionnements {
     width: 100%;
     height: 100%;
+    counter-reset: counter_fonctionnement;
+    padding: 1rem;
 }
 .fonctionnement {
     border-radius: 20px;
@@ -66,31 +63,33 @@ span {
     width: 100%;
     display: flex;
     position: relative;
-    margin: 1rem;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
     background-color: #f6f6f6;
     box-shadow: 3px 3px 3px gainsboro;
-}
+    align-items: center;
+    &_icone {
+        width: 15px;
+        margin-right: 1.5rem;
+    }
 
-
-.fonctionnement_rond {
-    border-radius: 50px 50px 50px 50px;
-    padding: 15px;
-    width: 2px;
-    height: 2px;
-    margin-right: 4rem;
-    margin-top: 1rem;
-    background-color: variables.$primary-color;
-}
-.fonctionnement_icone {
-    width: 15px;
-    margin-top: 2rem;
-    
-}
-
-.fonctionnement_texte
-{
-    margin: 2rem;
-    font-size: 18px;
+    &_texte {
+        font-size: 18px;
+    }
+    &::before {
+        counter-increment: counter_fonctionnement;
+        content: counter(counter_fonctionnement);
+        border-radius: 50px 50px 50px 50px;
+        width: 30px;
+        height: 30px;
+        background-color: variables.$primary-color;
+        position: absolute;
+        text-align: center;
+        line-height: 30px;
+        left: -15px;
+        top: 25px;
+        color: variables.$font-color-inversed;
+    }
 }
 
 .filtre_icone img {
@@ -145,12 +144,19 @@ span {
 
 .restaurant_article_coeur {
     width: 25px;
-    margin-left: 21rem;
-    margin-bottom: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
 .restaurant_article_contenu {
-    padding: 5px;
+    padding: 1rem;
+    position: relative;
+    span {
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
 }
 
 .footer {
@@ -162,6 +168,95 @@ span {
     }
     &_texte {
         color: white;
-        margin-left: 1rem;
+        margin: 1rem;
+    }
+}
+
+
+
+.header_image {
+    width: 100%;
+    height: 100%;
+}
+
+
+.carte_restaurant {
+    background-color: #f2f2f2;
+    border-radius: 50px 50px 0 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
+    box-shadow: 4px 4px 4px gainsboro;
+    
+}
+.carte_article_coeur {
+    width: 20px;
+}
+
+.coeur_button_carte {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    font-family: "Shrikhand", cursive;
+}
+
+.carte_entree
+{
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.cartes_articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+
+.carte_article {
+    display: block;
+    margin: 0 auto 2rem;
+    width: 100%;
+}
+
+
+.carte_article_conteneur {
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    height: 80px;
+    box-shadow: 4px 4px 4px gainsboro;
+}
+
+
+.carte_article_contenu {
+    padding: 0.8rem;
+    position: relative;
+    span {
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 2rem; 
+    }
+      
+}
+
+.prix
+{
+    padding-left: 17rem;
+}
+
+
+
+.commander {
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 100%;
+    &_button {
+        @include mixins.button;
+        margin: 0 auto;
     }
 }
