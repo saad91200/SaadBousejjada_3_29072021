@@ -172,13 +172,10 @@ body {
     }
 }
 
-
-
 .header_image {
     width: 100%;
     height: 100%;
 }
-
 
 .carte_restaurant {
     background-color: #f2f2f2;
@@ -187,7 +184,32 @@ body {
     height: 100%;
     padding-bottom: 1rem;
     box-shadow: 4px 4px 4px gainsboro;
-    
+}
+
+.carte_restaurant_container1 {
+    padding-top: 40vw;
+    background-image: url(images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: top;
+    background-size: contain;
+}
+.carte_restaurant_container2 {
+    padding-top: 40vw;
+    background-image: url(images/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-position: top;
+    background-size: contain;
+}
+.carte_restaurant_container3 {
+    padding-top: 40vw;
+    background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg.jpg);
+    background-position: top;
+    background-size: contain;
+}
+
+.carte_restaurant_container4 {
+    padding-top: 40vw;
+    background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-position: top;
+    background-size: contain;
 }
 .carte_article_coeur {
     width: 20px;
@@ -200,56 +222,72 @@ body {
     font-family: "Shrikhand", cursive;
 }
 
-.carte_entree
-{
+.carte_entree {
     padding-left: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-
 .cartes_articles {
     display: flex;
     flex-direction: column;
     align-items: center;
-padding-left: 1rem;
-padding-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
-
 
 .carte_article {
-    display: block;
+    display: grid;
+    grid-template-areas:
+        "title price checkbox"
+        "description price checkbox";
+    grid-template-columns: 1fr auto 0;
     margin: 0 auto 2rem;
     width: 100%;
-}
-
-
-.carte_article_conteneur {
     background-color: white;
     border-radius: 20px;
-    width: 100%;
     height: 80px;
     box-shadow: 4px 4px 4px gainsboro;
-}
-
-
-.carte_article_contenu {
-    padding: 0.8rem;
-    position: relative;
-    span {
-        font-weight: bold;
-        font-size: 1.2rem;
-        line-height: 2rem; 
+    &:hover{
+        grid-template-columns: 1fr auto 100px;
     }
-      
 }
 
-.prix
+
+.carte_article_title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    grid-area: title;
+}
+
+.carte_article_price {
+    grid-area: price;
+    align-self: end;
+    padding: .8rem;
+}
+.carte_article_description {
+    grid-area: description;
+    padding-bottom: .8rem;
+    padding-left: .8rem;
+}
+
+.carte_article_checkbox
 {
+    grid-area: checkbox;
+    background: #99E2D0;
+    border-radius: 0 20px 20px 0;    
+}
+
+.image_article_checkbox
+{
+    grid-area: checkbox;
+    width: 20px;
+
+}
+.prix {
     padding-left: 17rem;
 }
-
-
 
 .commander {
     background-color: #f6f6f6;
@@ -259,4 +297,133 @@ padding-right: 1rem;
         @include mixins.button;
         margin: 0 auto;
     }
+}
+
+@media (min-width: 768px) {
+    .body-home {
+        grid-gap: 1rem;
+        padding: 1rem;
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "explorer fonctionnement"
+            "restaurants restaurants"
+            "footer footer";
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        grid-area: header;
+        position: relative;
+        height: 100%;
+    }
+
+    .explorer {
+        grid-area: explorer;
+    }
+
+    .fonctionnement_section {
+        grid-area: fonctionnement;
+    }
+
+    .fonctionnement
+    {
+        align-items: center;
+    }
+
+    .restaurants {
+        grid-area: restaurants;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+    .restaurants_articles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .carte_restaurant_container4 {
+        padding-top: 20vw;
+        background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+        background-position: top;
+        background-size: contain;
+    }
+
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1280px) {
+    .body-home {
+        grid-gap: 1rem;
+        padding: 1rem;
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "explorer fonctionnement"
+            "restaurants restaurants"
+            "footer footer";
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        grid-area: header;
+        position: relative;
+        height: 100%;
+    }
+
+    .explorer {
+        grid-area: explorer;
+    }
+
+    .fonctionnement_section {
+        grid-area: fonctionnement;
+    }
+
+    .fonctionnement
+    {
+        align-items: center;
+    }
+
+    .restaurants {
+        grid-area: restaurants;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+    .restaurants_articles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .carte_restaurant_container4 {
+        padding-top: 40vw;
+        background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+        background-position: top;
+        background-size: contain;
+    }
+
+    .carte_restaurant
+    {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    }
+
 }
