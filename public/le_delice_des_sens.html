@@ -6,7 +6,11 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <title>Ohmyfood.com</title>
-    <link rel="stylesheet" href="">
+    <style>
+        :root{
+            --restaurant_background_image: url(images/les_delice_des_sens.jpg);
+        }
+    </style>
 </head>
 
 <body class="body-restaurent">
@@ -19,7 +23,7 @@
     </header>
 
 
-    <section data-background-image="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="carte_restaurant_container4">
+    <section class="carte_restaurant_container">
         <div class="carte_restaurant">
 
             <div class="coeur_button_carte">
@@ -37,12 +41,17 @@
 
                 <article class="carte_article">
 
-                    <span class="carte_article_title">Tartare de thon</span>
+                    <div class="carte_article_content">
+                        <span class="carte_article_title">Fricassée d'escargot</span>
+                        <p class="carte_article_description"> Aux pimet d'espelette </p>
+                    </div>
 
-                    <p class="carte_article_description"> Assaisonné au yuzu</p>
                     <p class="carte_article_price">25€</p>
+
                     <div class="carte_article_checkbox">
+                        <img class="image_article_checkbox" src="icone/icone_valide.png" alt="icone_valide">
                     </div>
+
                 </article>
 
             </div>
@@ -51,12 +60,15 @@
             <div class="cartes_articles">
 
                 <article class="carte_article">
+                    <div class="carte_article_content">
+                        <span class="carte_article_title">Foie gras de canard mi-cuit</span>
+                        <p class="carte_article_description"> Et ses copeaux de truffe noire</p>
+                    </div>
 
-                    <span class="carte_article_title">Bouchée de homard croustillant</span>
-
-                    <p class="carte_article_description"> Et sa farandole de petits légumes</p>
                     <p class="carte_article_price">35€</p>
+
                     <div class="carte_article_checkbox">
+                        <img class="image_article_checkbox" src="icone/icone_valide.png" alt="icone_valide">
                     </div>
                 </article>
 
@@ -66,12 +78,15 @@
             <div class="cartes_articles">
 
                 <article class="carte_article">
+                    <div class="carte_article_content">
+                        <span class="carte_article_title">Oeuf au plat</span>
+                        <p class="carte_article_description"> Assaisoné à la truffe sur lit de</p>
+                    </div>
 
-                    <span class="carte_article_title">Velouté de crèpes</span>
-
-                    <p class="carte_article_description"> Aux truffes</p>
                     <p class="carte_article_price">20€</p>
+
                     <div class="carte_article_checkbox">
+                        <img class="image_article_checkbox" src="icone/icone_valide.png" alt="icone_valide">
                     </div>
                 </article>
 
@@ -92,13 +107,16 @@
             <div class="cartes_articles">
 
                 <article class="carte_article">
-
-                    <span class="carte_article_title">Poulet roti aux herbes de provence</span>
-
-                    <p class="carte_article_description"> Et sa crème de truffe</p>
+                    <div class="carte_article_content">
+                        <span class="carte_article_title">Filet de boeuf aux herbes</span>
+                        <p class="carte_article_description"> Accompagnée de sa ribambelle de légumes</p>
+                    </div>
                     <p class="carte_article_price">40€</p>
+
                     <div class="carte_article_checkbox">
+                        <img class="image_article_checkbox" src="icone/icone_valide.png" alt="icone_valide">
                     </div>
+
                 </article>
 
             </div>
@@ -107,12 +125,15 @@
             <div class="cartes_articles">
 
                 <article class="carte_article">
-
-                    <span class="carte_article_title">Langouste rotie</span>
-
-                    <p class="carte_article_description"> Et ses légumes de saison</p>
+                    <div class="carte_article_content">
+                        <span class="carte_article_title">Parmentier de queue de boeuf</span>
+                        <p class="carte_article_description"> À la truffe noire sur sa purée de panais</p>
+                    </div>
                     <p class="carte_article_price">35€</p>
+
+
                     <div class="carte_article_checkbox">
+                        <img class="image_article_checkbox" src="icone/icone_valide.png" alt="icone_valide">
                     </div>
                 </article>
 
@@ -122,12 +143,15 @@
             <div class="cartes_articles">
 
                 <article class="carte_article">
+                    <div class="carte_article_content">
+                    <span class="carte_article_title">Filet de Turbot</span>
+                    <p class="carte_article_description">Aux agrumes</p>
+                    </div>
 
-                    <span class="carte_article_title">Cote de boeuf angus</span>
-
-                    <p class="carte_article_description">Et sa purée de panais</p>
                     <p class="carte_article_price">44€</p>
+
                     <div class="carte_article_checkbox">
+                        <img class="image_article_checkbox" src="icone/icone_valide.png" alt="icone_valide">
                     </div>
                 </article>
 
@@ -146,12 +170,14 @@
             <div class="cartes_articles">
 
                 <article class="carte_article">
-
-                    <span class="carte_article_title">Farandole de desserts</span>
-
-                    <p class="carte_article_description">Du chef</p>
+                    <div class="carte_article_content">
+                    <span class="carte_article_title">Paris-Brest</span>
+                    <p class="carte_article_description">Revisité</p>
+                    </div>
                     <p class="carte_article_price">18€</p>
+
                     <div class="carte_article_checkbox">
+                        <img class="image_article_checkbox" src="icone/icone_valide.png" alt="icone_valide">
                     </div>
                 </article>
 
@@ -162,11 +188,13 @@
 
                 <article class="carte_article">
 
-                    <span class="carte_article_title">Crème brulée</span>
-
-                    <p class="carte_article_description"> Revisitée</p>
+                    <div class="carte_article_content">
+                    <span class="carte_article_title">Macaron au chocolat d'exception</span>
+                    <p class="carte_article_description"> Et glace à la vanille de Madagascar</p>
+                    </div>
                     <p class="carte_article_price">22€</p>
                     <div class="carte_article_checkbox">
+                        <img class="image_article_checkbox" src="icone/icone_valide.png" alt="icone_valide">
                     </div>
                 </article>
 
@@ -177,11 +205,15 @@
 
                 <article class="carte_article">
 
-                    <span class="carte_article_title">Tiramisu</span>
-
-                    <p class="carte_article_description"> À la noisette</p>
+                    <div class="carte_article_content">
+                    <span class="carte_article_title">Mousse au chocolat</span>
+                    <p class="carte_article_description"> Au piment d'espelette et à la truffe noire</p>
+                    </div>
+                    
                     <p class="carte_article_price">23€</p>
+
                     <div class="carte_article_checkbox">
+                        <img class="image_article_checkbox" src="icone/icone_valide.png" alt="icone_valide">
                     </div>
                 </article>
 
