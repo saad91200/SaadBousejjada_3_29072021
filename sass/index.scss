@@ -4,7 +4,20 @@
 
 body {
     @include mixins.font-text;
-}
+
+        animation: fadeInAnimation ease 3s; 
+        animation-fill-mode: forwards; 
+        animation-iteration-count: 1; 
+        } 
+        @keyframes fadeInAnimation { 
+        0% { 
+        opacity: 0; 
+        } 
+        100% { 
+        opacity: 1; 
+        } 
+        } 
+
 
 .header {
     &_logo {
