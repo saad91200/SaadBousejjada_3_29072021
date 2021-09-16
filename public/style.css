@@ -43,6 +43,12 @@ body {
   height: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.explorer_title {
+  text-align: center;
+  margin: 2rem;
 }
 .explorer_button {
   border-radius: 24px;
@@ -53,19 +59,9 @@ body {
   color: #FFFFFF;
   margin: 0 auto;
 }
-
-.explorer_title {
-  text-align: center;
-  margin: 2rem;
-}
-
 .explorer_content {
   text-align: center;
   margin: 2rem;
-}
-
-.fonctionnement_title {
-  margin: 1rem;
 }
 
 .fonctionnements {
@@ -108,6 +104,9 @@ body {
   top: 25px;
   color: #FFFFFF;
 }
+.fonctionnement_title {
+  margin: 1rem;
+}
 
 .coeur_article_checkbox {
   color: red;
@@ -130,13 +129,16 @@ body {
   width: 100%;
   height: 100%;
   padding-top: 1rem;
+  background-color: #f6f6f6;
 }
-
 .restaurants_articles {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+}
+.restaurants_title {
+  margin: 1rem;
 }
 
 .restaurant_article {
@@ -144,15 +146,6 @@ body {
   margin: 0 auto 2rem;
   width: 100%;
 }
-
-.restaurants {
-  background-color: #f6f6f6;
-}
-
-.restaurants_title {
-  margin: 1rem;
-}
-
 .restaurant_article_conteneur {
   background-color: white;
   border-radius: 20px;
@@ -162,21 +155,18 @@ body {
   flex-direction: column;
   box-shadow: 4px 4px 4px gainsboro;
 }
-
 .restaurant_article_image {
   width: 100%;
   height: 160px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-
 .restaurant_article_coeur, .restaurant_article_coeur-plein {
   width: 25px;
   position: absolute;
   right: 1rem;
   top: 1rem;
 }
-
 .restaurant_article_contenu {
   padding: 1rem;
   position: relative;
@@ -189,6 +179,8 @@ body {
 
 .footer {
   background-color: #353535;
+  display: flex;
+  flex-direction: column;
 }
 .footer_logo {
   width: 100px;
@@ -197,6 +189,12 @@ body {
 }
 .footer_texte {
   color: white;
+}
+.footer_texte_icone {
+  height: 1rem;
+  width: 2rem;
+}
+.footer_texte_item {
   margin: 1rem;
 }
 
@@ -221,41 +219,13 @@ body {
   background-size: contain;
 }
 
-.carte_restaurant_container1 {
-  padding-top: 40vw;
-  background-image: url(images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-  background-position: top;
-  background-size: contain;
-}
-
-.carte_restaurant_container2 {
-  padding-top: 40vw;
-  background-image: url(images/stil-u2Lp8tXIcjw-unsplash.jpg);
-  background-position: top;
-  background-size: contain;
-}
-
-.carte_restaurant_container3 {
-  padding-top: 40vw;
-  background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg.jpg);
-  background-position: top;
-  background-size: contain;
-}
-
-.carte_restaurant_container4 {
-  padding-top: 40vw;
-  background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  background-position: top;
-  background-size: contain;
-}
-
 .carte_article_coeur {
   width: 20px;
 }
 
 .coeur_button_carte {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 1rem;
   font-family: "Shrikhand", cursive;
 }
@@ -269,9 +239,16 @@ body {
 }
 
 .carte_entree {
+  all: unset;
   padding-left: 1.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  width: 100%;
+}
+
+.carte_content {
+  display: flex;
+  flex-direction: column;
 }
 
 .cartes_articles {
@@ -326,6 +303,14 @@ body {
 .carte_article:nth-child(4) {
   animation-delay: 1000ms;
 }
+.carte_article_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+}
 
 .carte_article_content {
   display: flex;
@@ -334,24 +319,18 @@ body {
   width: 0;
 }
 
-.carte_article_title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 0.8rem;
-}
-
 .carte_article_price {
   align-self: end;
   padding: 0.8rem;
 }
 
 .carte_article_description {
-  padding-bottom: 0.8rem;
-  padding-left: 0.8rem;
   white-space: nowrap;
   overflow: hidden;
-  width: 100%;
   text-overflow: ellipsis;
+  padding-bottom: 0.8rem;
+  padding-left: 0.8rem;
+  width: 100%;
 }
 
 .carte_article_checkbox {
@@ -436,37 +415,9 @@ body {
     background-position: top;
     background-size: contain;
   }
-
-  .carte_restaurant_container1 {
-    padding-top: 30vw;
-    background-image: url(images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    background-position: top;
-    background-size: contain;
-  }
-
-  .carte_restaurant_container2 {
-    padding-top: 30vw;
-    background-image: url(images/stil-u2Lp8tXIcjw-unsplash.jpg);
-    background-position: top;
-    background-size: contain;
-  }
-
-  .carte_restaurant_container3 {
-    padding-top: 30vw;
-    background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg.jpg);
-    background-position: top;
-    background-size: contain;
-  }
-
-  .carte_restaurant_container4 {
-    padding-top: 30vw;
-    background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-    background-position: top;
-    background-size: contain;
-  }
 }
 @media (min-width: 1280px) {
-  .body-home {
+  .body_home {
     grid-gap: 1rem;
     padding: 1rem;
     display: grid;
@@ -482,14 +433,16 @@ body {
 
   .explorer {
     grid-area: explorer;
+    border-radius: 30px;
+    justify-content: center;
   }
 
   .fonctionnement_section {
     grid-area: fonctionnement;
   }
 
-  .fonctionnement {
-    align-items: center;
+  .fonctionnement_texte {
+    text-align: center;
   }
 
   .restaurants {
@@ -506,44 +459,17 @@ body {
     gap: 1rem;
   }
 
+  .restaurant_article {
+    max-width: 600px;
+  }
+
   .carte_restaurant_container {
-    padding-top: 40vw;
-    background-image: var(--restaurant_background_image);
-    background-position: top;
-    background-size: contain;
+    padding-top: 50vh;
   }
 
-  .carte_restaurant_container1 {
-    padding-top: 20vw;
-    background-image: url(images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    background-position: top;
-    background-size: contain;
-  }
-
-  .carte_restaurant_container2 {
-    padding-top: 20vw;
-    background-image: url(images/stil-u2Lp8tXIcjw-unsplash.jpg);
-    background-position: top;
-    background-size: contain;
-  }
-
-  .carte_restaurant_container3 {
-    padding-top: 20vw;
-    background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg.jpg);
-    background-position: top;
-    background-size: contain;
-  }
-
-  .carte_restaurant_container4 {
-    padding-top: 20vw;
-    background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-    background-position: top;
-    background-size: contain;
-  }
-
-  .carte_restaurant {
+  .carte_content {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

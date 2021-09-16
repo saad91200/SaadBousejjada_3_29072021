@@ -17,3 +17,9 @@
 @mixin font-text {
     font-family: "Roboto", sans-serif;
 }
+
+@mixin elipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
