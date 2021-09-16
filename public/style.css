@@ -17,19 +17,8 @@ ul {
 
 body {
   font-family: "Roboto", sans-serif;
-  animation: fadeInAnimation ease 3s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
 }
 
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .header_logo {
   width: 170px;
   margin: 1rem auto;
@@ -181,7 +170,7 @@ body {
   border-radius: 20px 20px 0px 0px;
 }
 
-.restaurant_article_coeur {
+.restaurant_article_coeur, .restaurant_article_coeur-plein {
   width: 25px;
   position: absolute;
   right: 1rem;
@@ -271,6 +260,14 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
+.coeur_button .restaurant_article_coeur-plein {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.coeur_button:hover .restaurant_article_coeur-plein {
+  opacity: 1;
+}
+
 .carte_entree {
   padding-left: 1.5rem;
   padding-top: 1rem;
@@ -285,6 +282,14 @@ body {
   padding-right: 1rem;
 }
 
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .carte_article {
   display: flex;
   margin: 0 auto 2rem;
@@ -294,6 +299,10 @@ body {
   height: 80px;
   box-shadow: 4px 4px 4px gainsboro;
   overflow: hidden;
+  animation: fadeInAnimation ease 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  opacity: 0;
 }
 .carte_article:hover .carte_article_checkbox {
   width: 100px;
@@ -301,6 +310,21 @@ body {
 .carte_article:hover .image_article_checkbox {
   transform: rotateZ(360deg);
   transition: 1s;
+}
+.carte_article:nth-child(0) {
+  animation-delay: 0ms;
+}
+.carte_article:nth-child(1) {
+  animation-delay: 250ms;
+}
+.carte_article:nth-child(2) {
+  animation-delay: 500ms;
+}
+.carte_article:nth-child(3) {
+  animation-delay: 750ms;
+}
+.carte_article:nth-child(4) {
+  animation-delay: 1000ms;
 }
 
 .carte_article_content {
@@ -331,7 +355,7 @@ body {
 }
 
 .carte_article_checkbox {
-  background: #99E2D0;
+  background: #99e2d0;
   border-radius: 0 20px 20px 0;
   overflow: hidden;
   display: flex;
@@ -406,8 +430,36 @@ body {
     gap: 1rem;
   }
 
+  .carte_restaurant_container {
+    padding-top: 30vw;
+    background-image: var(--restaurant_background_image);
+    background-position: top;
+    background-size: contain;
+  }
+
+  .carte_restaurant_container1 {
+    padding-top: 30vw;
+    background-image: url(images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: top;
+    background-size: contain;
+  }
+
+  .carte_restaurant_container2 {
+    padding-top: 30vw;
+    background-image: url(images/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-position: top;
+    background-size: contain;
+  }
+
+  .carte_restaurant_container3 {
+    padding-top: 30vw;
+    background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg.jpg);
+    background-position: top;
+    background-size: contain;
+  }
+
   .carte_restaurant_container4 {
-    padding-top: 20vw;
+    padding-top: 30vw;
     background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     background-position: top;
     background-size: contain;
@@ -454,8 +506,36 @@ body {
     gap: 1rem;
   }
 
-  .carte_restaurant_container4 {
+  .carte_restaurant_container {
     padding-top: 40vw;
+    background-image: var(--restaurant_background_image);
+    background-position: top;
+    background-size: contain;
+  }
+
+  .carte_restaurant_container1 {
+    padding-top: 20vw;
+    background-image: url(images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: top;
+    background-size: contain;
+  }
+
+  .carte_restaurant_container2 {
+    padding-top: 20vw;
+    background-image: url(images/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-position: top;
+    background-size: contain;
+  }
+
+  .carte_restaurant_container3 {
+    padding-top: 20vw;
+    background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg.jpg);
+    background-position: top;
+    background-size: contain;
+  }
+
+  .carte_restaurant_container4 {
+    padding-top: 20vw;
     background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     background-position: top;
     background-size: contain;
