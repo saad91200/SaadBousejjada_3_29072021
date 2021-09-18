@@ -24,6 +24,7 @@ body {
 
 .icone_map {
     width: 10px;
+    height: 10px;
 }
 
 .explorer {
@@ -51,10 +52,6 @@ body {
 }
 
 
-
-
-
-
 .fonctionnements {
     width: 100%;
     height: 100%;
@@ -76,7 +73,6 @@ body {
         width: 15px;
         margin-right: 1.5rem;
     }
-
     &_texte {
         font-size: 18px;
     }
@@ -217,27 +213,27 @@ body {
     height: 100%;
     padding-bottom: 1rem;
     box-shadow: 4px 4px 4px gainsboro;
+
+    &_container {
+        padding-top: 40vw;
+        background-image: var(--restaurant_background_image);
+        background-position: top;
+        background-size: contain;
+    }
+    &_container {
+        padding-top: 30vw;
+        background-image: var(--restaurant_background_image);
+        background-position: top;
+        background-size: contain;
+    }
 }
 
-.carte_restaurant_container {
-    padding-top: 40vw;
-    background-image: var(--restaurant_background_image);
-    background-position: top;
-    background-size: contain;
-}
 
 
-.carte_article_coeur {
-    width: 20px;
-    
-}
 
-.coeur_button_carte {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1rem;
-    font-family: "Shrikhand", cursive;
-}
+
+
+
 
 .coeur_button
 {
@@ -250,6 +246,12 @@ body {
         .restaurant_article_coeur-plein{
             opacity: 1;
         }
+    }
+    &_carte {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1rem;
+        font-family: "Shrikhand", cursive;
     }
 }
 
@@ -292,6 +294,40 @@ body {
     border-radius: 20px;
     height: 80px;
     box-shadow: 4px 4px 4px gainsboro;
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 0;
+    }
+    
+    
+    &_price {
+        align-self: end;
+        padding: 0.8rem;
+    }
+    
+    &_description {
+        @include mixins.elipsis;
+        padding-bottom: 0.8rem;
+        padding-left: 0.8rem;
+        width: 100%;
+    }
+    
+    
+    &_checkbox {
+        background: #99e2d0;
+        border-radius: 0 20px 20px 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        width: 0;
+        transition: width 1s;
+        box-sizing: border-box;
+    }
+
+
     &:hover {
         .carte_article_checkbox {
             width: 100px;
@@ -319,41 +355,15 @@ body {
         padding: 0.8rem;
 
     }
-}
 
-.carte_article_content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    width: 0;
-}
-
-
-
-.carte_article_price {
-    align-self: end;
-    padding: 0.8rem;
-}
-
-.carte_article_description {
-    @include mixins.elipsis;
-    padding-bottom: 0.8rem;
-    padding-left: 0.8rem;
-    width: 100%;
+    &_coeur {
+        width: 20px;
+        height: 20px;
+        
+    }
 }
 
 
-
-.carte_article_checkbox {
-    background: #99e2d0;
-    border-radius: 0 20px 20px 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    width: 0;
-    transition: width 1s;
-    box-sizing: border-box;
-}
 
 .image_article_checkbox {
     width: 20px;
@@ -396,33 +406,32 @@ body {
         grid-area: explorer;
     }
 
-    .fonctionnement_section {
-        grid-area: fonctionnement;
-    }
+    
 
     .fonctionnement {
         align-items: center;
+       
+        &_section {
+            grid-area: fonctionnement;
+        }
     }
 
     .restaurants {
         grid-area: restaurants;
+      
+        &_articles {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
     }
 
     .footer {
         grid-area: footer;
     }
-    .restaurants_articles {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
+    
 
-    .carte_restaurant_container {
-        padding-top: 30vw;
-        background-image: var(--restaurant_background_image);
-        background-position: top;
-        background-size: contain;
-    }
+    
     
     
 }
@@ -488,9 +497,6 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .footer
-    {
-        
-    }
+
 }
 

@@ -35,6 +35,7 @@ body {
 
 .icone_map {
   width: 10px;
+  height: 10px;
 }
 
 .explorer {
@@ -55,7 +56,7 @@ body {
   padding: 16px;
   width: fit-content;
   box-shadow: 4px 4px 4px gainsboro;
-  background-color: #9356DC;
+  background: linear-gradient(352deg, #9356DC, #FF79DA);
   color: #FFFFFF;
   margin: 0 auto;
 }
@@ -211,23 +212,17 @@ body {
   padding-bottom: 1rem;
   box-shadow: 4px 4px 4px gainsboro;
 }
-
 .carte_restaurant_container {
   padding-top: 40vw;
   background-image: var(--restaurant_background_image);
   background-position: top;
   background-size: contain;
 }
-
-.carte_article_coeur {
-  width: 20px;
-}
-
-.coeur_button_carte {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 1rem;
-  font-family: "Shrikhand", cursive;
+.carte_restaurant_container {
+  padding-top: 30vw;
+  background-image: var(--restaurant_background_image);
+  background-position: top;
+  background-size: contain;
 }
 
 .coeur_button .restaurant_article_coeur-plein {
@@ -236,6 +231,12 @@ body {
 }
 .coeur_button:hover .restaurant_article_coeur-plein {
   opacity: 1;
+}
+.coeur_button_carte {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+  font-family: "Shrikhand", cursive;
 }
 
 .carte_entree {
@@ -281,6 +282,34 @@ body {
   animation-iteration-count: 1;
   opacity: 0;
 }
+.carte_article_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 0;
+}
+.carte_article_price {
+  align-self: end;
+  padding: 0.8rem;
+}
+.carte_article_description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 0.8rem;
+  padding-left: 0.8rem;
+  width: 100%;
+}
+.carte_article_checkbox {
+  background: #99e2d0;
+  border-radius: 0 20px 20px 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 0;
+  transition: width 1s;
+  box-sizing: border-box;
+}
 .carte_article:hover .carte_article_checkbox {
   width: 100px;
 }
@@ -311,37 +340,9 @@ body {
   font-size: 1.2rem;
   padding: 0.8rem;
 }
-
-.carte_article_content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  width: 0;
-}
-
-.carte_article_price {
-  align-self: end;
-  padding: 0.8rem;
-}
-
-.carte_article_description {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-bottom: 0.8rem;
-  padding-left: 0.8rem;
-  width: 100%;
-}
-
-.carte_article_checkbox {
-  background: #99e2d0;
-  border-radius: 0 20px 20px 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  width: 0;
-  transition: width 1s;
-  box-sizing: border-box;
+.carte_article_coeur {
+  width: 20px;
+  height: 20px;
 }
 
 .image_article_checkbox {
@@ -363,7 +364,7 @@ body {
   padding: 16px;
   width: fit-content;
   box-shadow: 4px 4px 4px gainsboro;
-  background-color: #9356DC;
+  background: linear-gradient(352deg, #9356DC, #FF79DA);
   color: #FFFFFF;
   margin: 0 auto;
 }
@@ -387,33 +388,24 @@ body {
     grid-area: explorer;
   }
 
-  .fonctionnement_section {
-    grid-area: fonctionnement;
-  }
-
   .fonctionnement {
     align-items: center;
+  }
+  .fonctionnement_section {
+    grid-area: fonctionnement;
   }
 
   .restaurants {
     grid-area: restaurants;
   }
-
-  .footer {
-    grid-area: footer;
-  }
-
   .restaurants_articles {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
-  .carte_restaurant_container {
-    padding-top: 30vw;
-    background-image: var(--restaurant_background_image);
-    background-position: top;
-    background-size: contain;
+  .footer {
+    grid-area: footer;
   }
 }
 @media (min-width: 1280px) {
